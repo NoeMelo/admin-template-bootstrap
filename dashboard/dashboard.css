@@ -1,0 +1,204 @@
+body{
+    margin: 0;
+}
+
+
+.app-header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    background-color:#212529;
+    color: wheat;
+    z-index: 1050;
+    padding-right: 15px;
+}
+
+.app-header__logo{
+    flex: 1 0 auto;
+    color: wheat;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 26px;
+    padding: 0 15px;
+    line-height: 50px;
+
+}
+.app-header__logo:hover{
+    background-color: rgba(0, 0, 0, .1);
+    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
+}
+.app-search{
+    position: relative;
+    display: flex;
+    align-self: center;
+    margin-right: 15px;
+}
+.app-search__input{
+    border: 0;
+    padding: 5px 10px;
+    padding-right: 30px;
+    border-radius: 2px;
+    background-color:wheat;
+
+}
+
+.app-search__button{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    padding: 0 10px;
+    border: 0;
+    color: rgba(0, 0, 0, .8);
+    background: none;
+    cursor: pointer;
+}
+.app-nav{
+    /**@include list-unstyled();**/
+    display: flex;
+    margin-bottom: 0;
+    justify-content: flex-end;
+}
+
+.app-nav__item{
+    display: block;
+    padding: 18px;
+    line-height: 18px;
+    color: wheat;
+    transition: background-color 0.3s ease;
+}
+.app-nav__item:hover{
+    background: rgba(0, 0, 0, .1);
+    color: rgba(255, 255, 255, .8);
+}
+.app-nav__item:focus{
+    background: rgba(0, 0, 0, .1);
+}
+
+
+/*sidebar*/
+
+.app-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 70px;
+    width: 230px;
+    overflow: auto;
+    z-index: 10;
+    background-color:rgba(33, 37, 41, .9);
+    box-shadow: 0px 8px 17px rgba(24, 23, 23, 0.8);
+    transition: left 0.3s ease,
+        width 0.3s ease;
+}
+.app-menu{
+    margin-bottom: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.app-menu__item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-left: 2px solid transparent;
+    color: wheat;
+}
+.app-menu__item:hover{
+    background-color: rgba(0, 0, 0, .1);
+    color: rgba(255, 255, 255, .8);
+}
+
+.app-sidebar__toggle{
+    padding: 0 15px;
+    color: wheat;
+    line-height: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.app-sidebar__toggle:hover{
+    background: rgba(0, 0, 0, .1);
+    color: rgba(255, 255, 255, .8);
+}
+.app-sidebar__toggle:focus{
+    background: rgba(0, 0, 0, .1);
+}
+.app-sidebar__toggle span{
+    display: inline-block;
+    padding: 15px;
+}
+
+.app-content{
+    outline: 1px solid red;
+    min-height: calc(100vh - 50px);
+    margin-top: 50px;
+    padding: 30px;
+    background-color: whitesmoke;
+    margin-left: 230px;
+    transition: margin-left 0.3s ease;
+}
+
+.app-sidebar-taggled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 70px;
+    width: 230px;
+    overflow: auto;
+    z-index: 10;
+    background-color:rgba(33, 37, 41, .9);
+    box-shadow: 0px 8px 17px rgba(24, 23, 23, 0.8);
+    transition: left 0.3s ease,
+        width 0.3s ease;    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .app-sidebar{
+        left: -230px;
+    }
+    .app-content{
+        margin-left: 0px;
+    }
+    .app-sidebar__toggle{
+        order: -1;
+    }
+}
+
+@media only screen and (max-width: 580px){
+    .app-search{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 601px){
+    .app-header__logo{
+        flex: 0 0 auto;
+        display: block;
+        width: 230px;
+    }
+    .app-nav{
+        flex: 1 0 auto;
+    }
+}
+
+/*ICONS*/
+
+.sidebar-icon{
+    display: block;
+    padding: 10px 15px;
+}
+
+/*nav card header*/
+
+.nav-nosebro{
+    font-size: 40px;
+    background-color: red;
+}
