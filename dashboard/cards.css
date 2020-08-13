@@ -1,0 +1,16 @@
+.card-custom{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.col-custom{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.box-header{
+    padding: 10px 10px 10px 10px;
+}
+.box-body{
+    padding: 10px 10px 10px 10px;
+}

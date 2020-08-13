@@ -1,7 +1,11 @@
+:root{
+    --c-fondo-header:#17202A;/*#212529;*/
+    --c-letra-header:wheat;
+}
+
 body{
     margin: 0;
 }
-
 
 .app-header{
     position: fixed;
@@ -10,15 +14,15 @@ body{
     top: 0;
     width: 100%;
     display: flex;
-    background-color:#212529;
-    color: wheat;
+    background-color:var(--c-fondo-header);
+    color: var(--color-letra-fondo);
     z-index: 1050;
     padding-right: 15px;
 }
 
 .app-header__logo{
     flex: 1 0 auto;
-    color: wheat;
+    color: var(--c-letra-header);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 26px;

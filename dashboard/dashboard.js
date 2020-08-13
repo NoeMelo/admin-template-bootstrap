@@ -27,3 +27,7 @@ document.getElementById('toggle_id').addEventListener("click",function(){
         }        
     }
 });
+
+function deletebox(){
+    console.log("holaa");
+}

@@ -13,6 +13,7 @@
 
    <!-- Login-->
    <link href="dashboard/dashboard.css" rel="stylesheet" type="text/css">
+   <link href="dashboard/cards.css" rel="stylesheet" type="text/css">
 
 
 </head>
@@ -64,16 +65,15 @@
     <main class="app-content" id="app-content">
 
         <div class="app-title">
-            <div class="card-header">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-custom">
                         <ul class="nav">
                             <li class="nav-item">
                                 <a class="nav-link disabled" href="#">Home</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-custom">
                         <ul class="nav justify-content-end">
                             <li class="nav-item">
                               <a class="nav-link active" href="#">Active</a>
@@ -90,13 +90,44 @@
                         </ul>
                     </div>
                 </div>
-            </div>
         </div>
 
-        <div class="row">
+        <!-- Body contents-->
 
-            <div class="col-md-6">
-                <div class="card">
+        <div class="row">
+            <div class="col-md-6 col-custom">
+                <div class="card card-custom">
+                  <div class="card-body box-header">
+                    <h5 class="d-inline card-title">Box Collapse</h5>
+                    <div class="d-inline float-right">
+                        <a data-toggle="collapse" href="#box1" role="button" aria-expanded="false" aria-controls="box1"><i class="fa fa-minus"></i></a>
+                        <a href="#" onclick="deletebox();"> <i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                    <div class="collapse show" id="box1">
+                      <div class="card-body box-body">
+                        <h5 class="card-title">Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text"> Card box was customize with border card -> margin:5px; col -> padding-left padding-right: 0px, box-body and box-header -> paddin:10px;  </p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-custom">
+                <div class="card card-custom">
+                    <div class="card-body">
+                      <h5 class="card-title">Derecha</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="card-link">Card link</a>
+                      <a href="#" class="card-link">Another link</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6 col-custom">
+                <div class="card card-custom">
                     <div class="card-body">
                       <h5 class="card-title">Izquierda</h5>
                       <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -106,8 +137,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card">
+            <div class="col-md-6 col-custom">
+                <div class="card card-custom">
                     <div class="card-body">
                       <h5 class="card-title">Derecha</h5>
                       <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -120,23 +151,23 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
-
-                <div class="card text-center">
+            <div class="col-md-12 col-custom">
+                <div class="card text-center card-custom">
                     <div class="card-header">
                       Featured
+                      <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element -  Collapse</a>
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="collapse show" id = "multiCollapseExample1">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
                     </div>
                     <div class="card-footer text-muted">
                       2 days ago
                     </div>
                   </div>
-
-
             </div>
         </div>
 
