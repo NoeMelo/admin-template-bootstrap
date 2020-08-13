@@ -6,20 +6,20 @@
   <title>Home</title>
 
    <!-- Bootstrap core CSS -->
-   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
    <!-- Custom fonts for this template -->
-   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+   <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-   <!-- Login-->
-   <link href="dashboard/dashboard.css" rel="stylesheet" type="text/css">
-   <link href="dashboard/cards.css" rel="stylesheet" type="text/css">
+   <!-- app-->
+   <link href="static/css/style.css" rel="stylesheet" type="text/css">
+
 
 
 </head>
 <body class="app sidebar-mini">
     <header class="app-header">
-        <a href="#" class="app-header__logo"> AdminML</a>
+        <a href="#" class="app-header__logo"> <b>Admin</b> ML</a>
         <a href="#" class="app-sidebar__toggle" id="toggle_id" data-toggle="sidebar" aria-label="Hide Sidebar">
             <span class="fa fa-bars"></span>
         </a>
@@ -98,7 +98,7 @@
             <div class="col-md-6 col-custom">
                 <div class="card card-custom">
                   <div class="card-body box-header">
-                    <h5 class="d-inline card-title">Box Collapse</h5>
+                    <h5 class="d-inline card-title">Bar Chart</h5>
                     <div class="d-inline float-right">
                         <a data-toggle="collapse" href="#box1" role="button" aria-expanded="false" aria-controls="box1"><i class="fa fa-minus"></i></a>
                         <a href="#" onclick="deletebox();"> <i class="fa fa-times"></i></a>
@@ -106,25 +106,58 @@
                   </div>
                     <div class="collapse show" id="box1">
                       <div class="card-body box-body">
-                        <h5 class="card-title">Title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text"> Card box was customize with border card -> margin:5px; col -> padding-left padding-right: 0px, box-body and box-header -> paddin:10px;  </p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                        <canvas id="myChart"></canvas>
                       </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-custom">
-                <div class="card card-custom">
-                    <div class="card-body">
-                      <h5 class="card-title">Derecha</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
+              <div class="card card-custom">
+                  <div class="card-body box-header">
+                    <h5 class="d-inline card-title">Line Chart</h5>
+                    <div class="d-inline float-right">
+                        <a data-toggle="collapse" href="#box2" role="button" aria-expanded="false" aria-controls="box2"><i class="fa fa-minus"></i></a>
+                        <a href="#" onclick="deletebox();"> <i class="fa fa-times"></i></a>
                     </div>
                   </div>
+                  <div class="collapse show" id="box2">
+                    <div class="card-body box-body">
+                      <canvas id="myChart2"></canvas>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-custom">
+              <div class="card card-custom">
+                  <div class="card-body box-header">
+                    <h5 class="d-inline card-title">Pie Chart</h5>
+                    <div class="d-inline float-right">
+                        <a data-toggle="collapse" href="#box3" role="button" aria-expanded="false" aria-controls="box3"><i class="fa fa-minus"></i></a>
+                        <a href="#" onclick="deletebox();"> <i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                  <div class="collapse show" id="box3">
+                    <div class="card-body box-body">
+                      <canvas id="myChart3"></canvas>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-custom">
+              <div class="card card-custom">
+                  <div class="card-body box-header">
+                    <h5 class="d-inline card-title">Polar Area</h5>
+                    <div class="d-inline float-right">
+                        <a data-toggle="collapse" href="#box4" role="button" aria-expanded="false" aria-controls="box4"><i class="fa fa-minus"></i></a>
+                        <a href="#" onclick="deletebox();"> <i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                  <div class="collapse show" id="box4">
+                    <div class="card-body box-body">
+                      <canvas id="myChart4"></canvas>
+                    </div>
+                  </div>
+                </div>
             </div>
             <div class="col-md-6 col-custom">
                 <div class="card card-custom">
@@ -138,16 +171,17 @@
                 </div>
             </div>
             <div class="col-md-6 col-custom">
-                <div class="card card-custom">
-                    <div class="card-body">
-                      <h5 class="card-title">Derecha</h5>
-                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
+              <div class="card card-custom">
+                  <div class="card-body">
+                    <h5 class="card-title">Derecha</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
                   </div>
-            </div>
+                </div>
+          </div>
+
         </div>
 
         <div class="row">
@@ -159,9 +193,36 @@
                     </div>
                     <div class="collapse show" id = "multiCollapseExample1">
                       <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">First</th>
+                              <th scope="col">Last</th>
+                              <th scope="col">Handle</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>@mdo</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>Jacob</td>
+                              <td>Thornton</td>
+                              <td>@fat</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                     <div class="card-footer text-muted">
@@ -176,11 +237,164 @@
 
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- app-->
-  <script src="dashboard/dashboard.js"></script>
-  
+  <script src="static/js/index.js"></script>
+
+  <!--ChartJs-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+  <script>
+
+    let opciones = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            legend:{
+              display:false,
+            }
+        }
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: opciones,
+    });
+
+    var ctx2 = document.getElementById('myChart2').getContext('2d');
+    var myChart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'Dolar',
+                data: [5, 9, 6, 10, 12, 13,20],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            },
+            {
+              label:"Sol",
+              data:[9, 13, 10, 14, 16, 17,24],
+              backgroundColor: [
+                    'rgba(153, 102, 255, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(153, 102, 255, 1)',
+                ],
+                borderWidth: 1
+            },
+            {
+              label:"Euro",
+              data:[0, 5, 7, 23, 18, 20,29],
+              backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: opciones,
+    });
+
+    var ctx3 = document.getElementById('myChart3').getContext('2d');
+    var myPieChart = new Chart(ctx3, {
+    type: 'pie',
+    data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: opciones,
+    });
+
+    var ctx4 = document.getElementById('myChart4').getContext('2d');
+    var myPolarChart = new Chart(ctx4, {
+    type: 'polarArea',
+    data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: opciones,
+    });
+
+
+    </script>
+
 </body>
 </html>

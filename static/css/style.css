@@ -25,7 +25,7 @@ body{
     color: var(--c-letra-header);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    font-size: 26px;
+    font-size: 23px;
     padding: 0 15px;
     line-height: 50px;
 
@@ -118,6 +118,9 @@ body{
     background-color: rgba(0, 0, 0, .1);
     color: rgba(255, 255, 255, .8);
 }
+.menu_item_span{
+    font-size: 14px;
+}
 
 .app-sidebar__toggle{
     padding: 0 15px;
@@ -205,4 +208,22 @@ body{
 .nav-nosebro{
     font-size: 40px;
     background-color: red;
+}
+
+/*Card Style*/
+.card-custom{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.col-custom{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.box-header{
+    padding: 10px 10px 10px 10px;
+}
+.box-body{
+    padding: 10px 10px 10px 10px;
 }
